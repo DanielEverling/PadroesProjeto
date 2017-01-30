@@ -1,4 +1,4 @@
-package br.com.padroes.test.strategy;
+package br.com.padroes.test.designpatterns;
 
 
 
