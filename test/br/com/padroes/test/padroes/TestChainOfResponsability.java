@@ -1,4 +1,4 @@
-package br.com.padroes.test.designpatterns;
+package br.com.padroes.test.padroes;
 
 
 
