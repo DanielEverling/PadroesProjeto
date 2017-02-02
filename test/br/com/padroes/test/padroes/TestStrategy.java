@@ -1,7 +1,5 @@
 package br.com.padroes.test.padroes;
 
-
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -18,13 +16,12 @@ public class TestStrategy {
     Double impostoIcms = calculaImpostoIcms.calcular(new Orcamento(500.00));
     Assert.assertEquals(new Double(50), impostoIcms);
   }
-  
+
   @Test
   public void testaCalculadoraImpostoISS() {
     CalculadoraImposto calculaImpostoISS = new CalculadoraImposto(new ISS());
     Double impostoISS = calculaImpostoISS.calcular(new Orcamento(500.00));
     Assert.assertEquals(new Double(30), impostoISS);
   }
-  
 
 }
