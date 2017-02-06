@@ -8,13 +8,16 @@ import br.com.padroes.chainofresponsability.Item;
 
 public class Orcamento {
 
-  private Double valor;
+  protected Double valor;
 
   private final List<Item> itens;
+
+  protected DescontoExtraOrcamento estadoOrcamento;
 
   public Orcamento(Double valor) {
     this.valor = valor;
     this.itens = new ArrayList<>();
+    this.estadoOrcamento = new EmAprovacao();
   }
 
   public Double getValor() {
@@ -29,4 +32,19 @@ public class Orcamento {
     return Collections.unmodifiableList(itens);
   }
 
+  public void aplicarDescontoExtra() {
+    estadoOrcamento.aplicarDescontoExtra(this);
+  }
+
+  public void aprovar() {
+    estadoOrcamento.aprovar(this);
+  }
+
+  public void reprovar() {
+    estadoOrcamento.reprovar(this);
+  }
+
+  public void finalizar() {
+    estadoOrcamento.finalizar(this);
+  }
 }
