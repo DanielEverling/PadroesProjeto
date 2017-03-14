@@ -15,7 +15,20 @@ public class Subtracao implements Expressao {
   public int avaliar() {
     int valorEsquerda = esquerda.avaliar();
     int valorDireita = direita.avaliar();
-    return valorEsquerda +- valorDireita;
+    return valorEsquerda + -valorDireita;
+  }
+
+  @Override
+  public String aceitar(ImpressoraVisitor impressora) {
+    return impressora.visitaSubstracao(this);
+  }
+
+  public Expressao getEsquerda() {
+    return esquerda;
+  }
+
+  public Expressao getDireita() {
+    return direita;
   }
 
 }

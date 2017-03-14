@@ -18,4 +18,17 @@ public class Soma implements Expressao {
     return valorEsquerda + valorDireita;
   }
 
+  @Override
+  public String aceitar(ImpressoraVisitor impressora) {
+    return impressora.visitaSoma(this);
+  }
+  
+  public Expressao getEsquerda() {
+    return esquerda;
+  }
+  
+  public Expressao getDireita() {
+    return direita;
+  }
+  
 }

@@ -12,4 +12,8 @@ public class CalculadoraImposto {
     return imposto.calcular(orcamento);
   }
   
+  public void setImposto(Imposto imposto) {
+    this.imposto = imposto;
+  }
+  
 }

@@ -13,4 +13,9 @@ public class Numero implements Expressao {
     return numero;
   }
 
+  @Override
+  public String aceitar(ImpressoraVisitor impressora) {
+    return impressora.visitaNumero(this);
+  }
+  
 }
